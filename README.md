@@ -17,7 +17,7 @@ Now chop up the file.
 
      $ aplit -b 999K mydb.db mydb_
 
-whis gives me:
+This gives me:
 
      $ ls -l my*
      -rw-rw-r-- 1 ray ray 1022976 Sep 10 16:48 mydb_aa
@@ -29,7 +29,12 @@ Then I move the fragments to the place the code expects them.
 
      $ mv mydb_* app/src/main/assets/files
 
-And here is the result when I launch on a fresh emulator:
+And here is the result when I launch on a fresh emulator. I have seen this error\
+and I have seen other errors, but this is what I see with this project right now.
+
+The emulator that I am running in is a Nexus 5, running API 22. It has 1.5 GB of RAM
+and 64 MB VM heap, which is the default setup for this emulator when created in Android Studio.
+
 
      09-10 16:54:32.916    1300-1300/? I/art﹕ Not late-enabling -Xcheck:jni (already on)
      09-10 16:54:35.876    1300-1300/org.ganymede.databaseloadingapp E/SQLiteLog﹕ (5) database is locked
